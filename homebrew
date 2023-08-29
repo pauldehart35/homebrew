@@ -1,1 +1,155 @@
-
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "RealmCollision",
+				"abbreviation": "RC2023",
+				"full": "Realm Collision",
+				"url": "",
+				"authors": [
+					"NightPaul"
+				],
+				"convertedBy": [],
+				"color": "#ffd700"
+			},
+			{
+				"json": "TheStudyofDeath",
+				"abbreviation": "tSoD",
+				"full": "The Study of Death",
+				"url": "https://eventyrgames.store/products/the-study-of-death-5e-adventure",
+				"authors": [
+					"J.A. Valeur",
+					"S.K. Valeur",
+					"Kathleen Harrington",
+					"and Diego"
+				],
+				"convertedBy": [
+					"NightPaul"
+				],
+				"color": "#780475"
+			}
+		]
+	},
+	"monster": [
+		{
+			"uniqueId": "892b8ff9-ab4f-467c-a35b-00e082291e64",
+			"name": "Flesh Hook Zombie",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"source": "TheStudyofDeath",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"formula": "5d8 + 15",
+				"average": 37
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 16,
+			"int": 8,
+			"wis": 8,
+			"cha": 6,
+			"passive": 9,
+			"cr": "1",
+			"shortName": true,
+			"page": 9,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Understands the language it knew in life",
+				"but can't speak"
+			],
+			"languageTags": [
+				"LF",
+				"CS"
+			],
+			"save": {
+				"wis": "+1"
+			},
+			"skill": {
+				"athletics": "+4"
+			},
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"isNpc": true,
+			"tokenUrl": "https://e7.pngegg.com/pngimages/113/539/png-clipart-zombie-zombie.png",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The zombie makes a Flesh Hook attack and a Bite attack."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Flesh Hook",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 15 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage and the target is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the target is {@condition restrained}, and the zombie can’t use Flesh Hook on another target."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"bonus": [
+				{
+					"name": "Reel",
+					"entries": [
+						"The zombie attempts to pull a creature {@condition grappled} by its flesh hook. The target takes {@h}3 ({@damage 1d6})  piercing damage and must succeed on a {@dc 12} Strength saving throw or be pulled up to 10 feet in a straight line toward the zombie."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"fluff": {
+				"entries": [
+					"An ordinary zombie is unlikely to scare seasoned adventurers who can face down dozens of the shambling, slow-moving brutes without breaking a sweat. Not all zombies are slow, shambling, or one- dimensional, however. ",
+					"The flesh hook zombie has a metal chain and hook grafted into the flesh of one its arms."
+				]
+			}
+		}
+	]
+}
